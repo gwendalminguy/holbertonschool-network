@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Dispalys all active IPv4 IP adresses.
+
+ifconfig | grep "inet " | cut -d ' ' -f10
