@@ -43,3 +43,9 @@ The **Application Server** is responsible for running the actual **business logi
 The **Database Server** is where the persistent data of the application is stored and managed (using systems like `MySQL`, `PostgreSQL`, or `MongoDB`). When the application server sends a query (such as getting all information for a specific user), the database server processes it by searching its stored tables or documents and returns the matching results. The application server then takes this raw data, structures it according to the application’s needs, and sends it back to the web server. Finally, the web server packages this response into an HTTP reply that travels back over the network to the user’s browser, where the requested page is displayed.
 
 In a **Distributed Web Infrastructure**, where several instances of the application exist to handle heavy traffic, the **Database Server** also needs special consideration. If every server had its own isolated database, the data could quickly become inconsistent. To solve this, most systems rely on a **Primary-Replica model**. In this setup, a single **Primary Database** handles all write operations (such as `inserting` or `updating` user information), and these changes are then replicated to one or more **Replica Databases**, which can be used for read operations. This ensures that data stays synchronized across the infrastructure: users can connect to different servers without seeing outdated or conflicting information, while the workload is distributed between multiple database instances.
+
+<br>
+<p align=center>
+	<img src="1-diagram.png" width="500">
+</p>
+<br>
