@@ -4,7 +4,7 @@ When you type a web address into your browser and press enter, a surprising numb
 
 ### DNS Resolution
 
-When a user tries to access a website such as `https://www.google.com` from their browser, the **Domain Name** must first be translated into an **IP Address** to establish the connection. To find this address, the browser will first check its own cache, where the entry may exist if the website has been visited recently. If not, it will ask the operating system, which will also check its cache and then the `hosts` file. If the IP address is still not found, the operating system will contact the configured **DNS Server**, which acts like a directory for the internet. It translates human-readable names (`google.com`) into numerical IP addresses (`8.8.8.8`). The IP address is then sent back to the operating system and passed on to the browser.
+When a user tries to access a website such as `https://www.google.com` from their browser, the **Domain Name** must first be translated into an **IP Address** to establish the connection. To find this address, the browser will first check its own `cache`, where the entry may exist if the website has been visited recently. If not, it will ask the operating system, which will also check its `cache`, and then the `hosts` file. If the IP address is still not found, the operating system will contact the configured **DNS Server**, which acts like a directory for the internet. It translates human-readable names (`google.com`) into numerical IP addresses (`8.8.8.8`). The IP address is then sent back to the operating system and passed on to the browser.
 
 ### TCP Connection
 
